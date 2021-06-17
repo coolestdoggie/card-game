@@ -8,7 +8,9 @@ using TMPro;
 public class CardDisplay : MonoBehaviour {
 
 	[SerializeField] Card card;
-    
+
+
+
 	[SerializeField] TMP_Text nameText;
 	[SerializeField] TMP_Text descriptionText;
     
@@ -18,15 +20,44 @@ public class CardDisplay : MonoBehaviour {
 	[SerializeField] TMP_Text attackText;
     [SerializeField] TMP_Text healthText;
 
-	void Start () {
+    float hp;
+    float attack;
+    float mana;
+
+    public TMP_Text HealthText { get => healthText; set => healthText = value; }
+
+    public float Hp { get => hp; set
+        { 
+            hp = value;
+            HealthText.text = hp.ToString();
+        }
+    }
+
+    public float Attack { get => attack; set
+        {
+            attack = value;
+            attackText.text = attack.ToString();
+        }
+    }
+
+    public float Mana { get => mana; set 
+        {
+            mana = value;
+            manaText.text = mana.ToString();
+        }
+    }
+
+    void Start () {
+        Hp = card.health;
+
 		nameText.text = card.name;
 		descriptionText.text = card.description;
 
 		artworkImage.sprite = card.artwork;
 
-		manaText.text = card.manaCost.ToString();
-		attackText.text = card.attack.ToString();
-		healthText.text = card.health.ToString();
+		manaText.text = Mana.ToString();
+		attackText.text = Attack.ToString();
+		HealthText.text = Hp.ToString();
         StartCoroutine(DownloadImage("https://picsum.photos/200/300"));
         
 	}

@@ -92,6 +92,5 @@ public class ObjectPooler : MonoBehaviour
         }
         pooledObjectsList.Add(pooledObjects);
         positions.Add(0);
-
     }
 }

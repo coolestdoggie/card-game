@@ -12,5 +12,6 @@ public class Card : ScriptableObject {
 
 	public int manaCost;
 	public int attack;
-	public int health;
+    public int health;
+
 }
