@@ -44,4 +44,6 @@ public class CardDisplay : MonoBehaviour {
             artworkImage.overrideSprite = sprite;
         }
     }
+
+    
 }
