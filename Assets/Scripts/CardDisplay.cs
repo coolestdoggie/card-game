@@ -7,16 +7,16 @@ using TMPro;
 
 public class CardDisplay : MonoBehaviour {
 
-	public Card card;
+	[SerializeField] Card card;
+    
+	[SerializeField] TMP_Text nameText;
+	[SerializeField] TMP_Text descriptionText;
+    
+	[SerializeField] Image artworkImage;
 
-	public TMP_Text nameText;
-	public TMP_Text descriptionText;
-
-	public Image artworkImage;
-
-	public TMP_Text manaText;
-	public TMP_Text attackText;
-	public TMP_Text healthText;
+	[SerializeField] TMP_Text manaText;
+	[SerializeField] TMP_Text attackText;
+    [SerializeField] TMP_Text healthText;
 
 	void Start () {
 		nameText.text = card.name;
