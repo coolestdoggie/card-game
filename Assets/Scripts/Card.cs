@@ -18,5 +18,4 @@ public class Card : ScriptableObject {
 	{
 		Debug.Log(name + ": " + description + " The card costs: " + manaCost);
 	}
-
 }
