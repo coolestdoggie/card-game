@@ -17,4 +17,4 @@ MonoBehaviour:
   artwork: {fileID: 21300000, guid: 25cef1bb73e99b346a44fba23bed55ea, type: 3}
   manaCost: 8
   attack: 6
-  health: 8
+  health: 15

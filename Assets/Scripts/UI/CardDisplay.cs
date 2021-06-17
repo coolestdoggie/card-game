@@ -55,9 +55,9 @@ public class CardDisplay : MonoBehaviour {
 
 		artworkImage.sprite = card.artwork;
 
-		manaText.text = Mana.ToString();
-		attackText.text = Attack.ToString();
-		HealthText.text = Hp.ToString();
+		manaText.text = card.manaCost.ToString();
+		attackText.text = card.attack.ToString();
+		HealthText.text = card.health.ToString();
         StartCoroutine(DownloadImage("https://picsum.photos/200/300"));
         
 	}
